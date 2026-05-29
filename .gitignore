@@ -1,0 +1,27 @@
+# Compilação
+target/
+out/
+*.class
+*.jar
+
+# IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+release.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.classpath
+.project
+.settings/
+
