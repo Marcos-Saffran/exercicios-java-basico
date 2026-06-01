@@ -7,7 +7,7 @@ public class exercicio2 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        int opcao = 0;
+        int opcao;
         do {
             exibirMenu();
             opcao = input.nextInt();
@@ -45,8 +45,24 @@ public class exercicio2 {
     }
 
     private static void calcularIMC(Scanner input) {
-        System.out.println("Ainda não implementado.");
-
+        System.out.println("Informe o seu peso em kg:");
+        double peso = input.nextDouble();
+        System.out.println("Informe a sua altura em metros:");
+        double altura = input.nextDouble();
+        var IMC = peso/(altura*altura);
+        if  (IMC <= 18.5) {
+            System.out.println("IMC: " + IMC + " - Abaixo do peso");
+        } else if (IMC > 18.5 && IMC <= 24.9) {
+            System.out.println("IMC: " + IMC + " - Peso ideal");
+        } else if (IMC > 24.9 && IMC <= 29.9) {
+            System.out.println("IMC: " + IMC + " - Levemente acima do peso");
+        } else if (IMC > 29.9 && IMC <= 34.9) {
+            System.out.println("IMC: " + IMC + " - Obesidade Grau I");
+        } else if (IMC > 34.9 && IMC <= 39.9) {
+            System.out.println("IMC: " + IMC + " - Obesidade Grau II (Severa)");
+        } else if (IMC > 39.9) {
+            System.out.println("IMC: " + IMC + " - Obesidade Grau III (Mórbida)");
+        }
     }
 
     private static void exibirNumerosParesImpares(Scanner input) {
@@ -69,5 +85,7 @@ public class exercicio2 {
         System.out.println("4 - Informar um número inicial e ler números até que um não seja divisível pelo número inicial");
         System.out.println("5 - Sair");
         System.out.println("---------------------------------------------");
+        System.out.println("Digite a opção desejada: ");
+
     }
 }
