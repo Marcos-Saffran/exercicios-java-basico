@@ -66,7 +66,23 @@ public class exercicio2 {
     }
 
     private static void exibirNumerosParesImpares(Scanner input) {
-        System.out.println("Ainda não implementado.");
+        System.out.println("Digite o primeiro numero:");
+        int primeiroNumero = input.nextInt();
+        int segundoNumero = primeiroNumero;
+        while (segundoNumero <= primeiroNumero) {
+            System.out.println("Digite o segundo numero (maior que o primeiro numero):");
+            segundoNumero = input.nextInt();
+        }
+        System.out.println("Escolha uma opção: 1 - Exibir números pares, 2 - Exibir números ímpares");
+        int opcao = input.nextInt();
+        System.out.println("Os números " + (opcao == 1 ? "pares" : "ímpares") + " do " + segundoNumero + " ao " + primeiroNumero + " são:");
+        for (int i = segundoNumero; i >= primeiroNumero; i--){
+            if (opcao == 1 && i % 2 == 0) {
+                System.out.println(i);
+            } else if (opcao == 2 && i % 2 != 0) {
+                System.out.println(i);
+            }
+        }
 
     }
 
