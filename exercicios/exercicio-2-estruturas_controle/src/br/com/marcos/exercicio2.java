@@ -36,7 +36,12 @@ public class exercicio2 {
     }
 
     private static void calcularTabuada(Scanner input) {
-        System.out.println("Ainda não implementado.");
+        System.out.println("Digite um número para calcular a tabuada de 1 até 10:");
+        int numero = input.nextInt();
+        for (int i = 1; i <=10; i++){
+            int resultado = i * numero;
+            System.out.printf("%d x %d = %d%n", numero, i, resultado);
+        }
     }
 
     private static void calcularIMC(Scanner input) {
