@@ -26,7 +26,7 @@ public class exercicio2 {
                     verificarDivisibilidade(input);
                     break;
                 case 5:
-                    System.out.println("Saindo do programa...");
+                    System.out.println("saindo do programa...");
                     break;
                 default:
                     System.out.println("Opção inválida. Por favor, escolha uma opção válida.");
@@ -87,11 +87,24 @@ public class exercicio2 {
     }
 
     private static void verificarDivisibilidade(Scanner input) {
-        System.out.println("Ainda não implementado.");
-
+        System.out.println("Informe um número que será o divisor:");
+        var numero = input.nextInt();
+        var continueVerificando = true;
+        while (continueVerificando){
+            System.out.println("Informe um número para verificar se é divisível por " + numero + ":");
+            var numeroVerificar = input.nextInt();
+            if (numeroVerificar < numero){
+                System.out.printf("O número %d é menor que o número divisor %d. Por favor, informe um número maior ou igual ao número divisor.%n", numeroVerificar, numero);
+                continue;
+            }
+            var resultado = numeroVerificar % numero;
+            continueVerificando = resultado == 0;
+            System.out.printf("O número %d %s é divisível por %d.%n", numeroVerificar, resultado == 0 ? "" : "não", numero);
+        }
     }
 
     private static void exibirMenu() {
+        System.out.println("---------------------------------------------");
         System.out.println("Olá escolha uma das opções abaixo: ");
         System.out.println("---------------------------------------------");
 
@@ -99,7 +112,7 @@ public class exercicio2 {
         System.out.println("2 - Calcular o IMC (Índice de Massa Corporal)");
         System.out.println("3 - Exibir números ímpares ou pares entre dois números");
         System.out.println("4 - Informar um número inicial e ler números até que um não seja divisível pelo número inicial");
-        System.out.println("5 - Sair");
+        System.out.println("5 - sair");
         System.out.println("---------------------------------------------");
         System.out.println("Digite a opção desejada: ");
 
