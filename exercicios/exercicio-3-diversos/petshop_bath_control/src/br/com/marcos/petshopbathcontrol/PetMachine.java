@@ -1,3 +1,5 @@
+package br.com.marcos.petshopbathcontrol;
+
 public class PetMachine {
 
     private boolean clean = true;

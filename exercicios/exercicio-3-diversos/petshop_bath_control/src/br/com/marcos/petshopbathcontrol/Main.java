@@ -1,3 +1,5 @@
+package br.com.marcos.petshopbathcontrol;
+
 import java.util.Scanner;
 
 public class Main {
@@ -7,8 +9,6 @@ public class Main {
     private final static PetMachine petMachine = new PetMachine();
 
     public static void main(String[] args) {
-
-
         scanner.useDelimiter("\\n");
         var option = -1;
 
