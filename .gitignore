@@ -25,3 +25,5 @@ Thumbs.db
 .project
 .settings/
 
+/exercicios/exercicio-3-diversos/bank_account/.gitignore
+/exercicios/exercicio-3-diversos/car_control/.gitignore
