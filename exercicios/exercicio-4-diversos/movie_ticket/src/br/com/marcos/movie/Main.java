@@ -1,3 +1,5 @@
+package br.com.marcos.movie;
+
 import br.com.marcos.tickets.FamilyTicket;
 import br.com.marcos.tickets.HalfpriceTicket;
 import br.com.marcos.tickets.StandardTicket;
